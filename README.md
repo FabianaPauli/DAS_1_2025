@@ -16,3 +16,23 @@ MODULOS -> COMO SE SEPARA O SOFTWARE, E COMO ESSAS AREAS, FUNÇÕES, SE CONVERSA
 
 SERIÇOS -> SÃO OS CASOS DE USO
 
+## Aula 27/06/25
+
+MODEL-VIEW-CONTROLLER 
+uma arquitetura de software 
+model
+  "dados que vao aparecer na tela"
+
+view 
+  tela/interface 
+
+controller
+  controla(intermedia) onde vai os dados na interface
+
+entidade classe que representa os dados processados e armazenados no banco
+model classe que representa os dados que chegam do banco e apresenta na tela
+
+Selenium -> software para teste de tela
+
+MICROSSERVIÇO -> DIVISÃO EM MODULOS
+MONOLITO -> REPOSITORIO UNICO DE CÓDIGO (TUDO NO MESMO LUGAR), USO DE UMA ÚNICA TÉCNOLOGIA, COMPILADO E TESTADO GERANDO UM ÚNICO PACOTE, EXECUTADO COMO UM ÚNICO PROCESSO NO SISTEMA OPERACIONAL,*UM ÚNICO BANCO DE DADOS*
