@@ -44,28 +44,47 @@ Arquitetura de software composta por:
 
 ## Aula 05/03/25
 
-**Big Ball of Mud** → quando não se tem uma definição de arquiutetura, sem padrão, bagunçado
+### **Big Ball of Mud**
+Quando não há uma definição de arquitetura, sem padrão, resultando em um sistema desorganizado e difícil de manter.
 
-**Padrão Arquitetural** → PADRÃO ARQUITETURAL = Uma solução para um problema específico, como o MVC (MODEL(dados), VIEW(tela), CONTROL(comportamento)), que separa as responsabilidades.
-**Estilo de Arquitetura** → Orgaização do projeto
-  **Camadas**
-    - Divisão de Responsabilidade
-    - Performace
-    - Segurança
-    - Manutenabilidade
-    - Camada de apresentação
-      - Requisitos
-    - Camada de lógica de negócios (aplicação)
-      - local central para definição e atualização das regras
-      - escalar o backend suportar as requisições
-    - Camada de Persistência (Banco de dados)
-      - Banco de dados relacional - Consolidada
-      - Resolve problemas de concorrência
-      - Permite compartilhamento de dados
+### **Padrão Arquitetural**
+Uma solução para um problema específico. Exemplo: **MVC** (*Model-View-Controller*), que separa as responsabilidades:
+- **Model** → Dados
+- **View** → Tela
+- **Controller** → Comportamento
 
-*Curiosidade → O linux e o Windows são monolitos*
+### **Estilo de Arquitetura**
+Organização do projeto baseada em camadas:
+- **Divisão de Responsabilidade**
+- **Performance**
+- **Segurança**
+- **Manutenibilidade**
+- **Camada de Apresentação**
+  - Define requisitos visuais e de interação
+- **Camada de Lógica de Negócios (Aplicação)**
+  - Centraliza a definição e atualização das regras de negócio
+  - Escala o backend para suportar requisições
+- **Camada de Persistência (Banco de Dados)**
+  - Utiliza banco de dados relacional, uma solução consolidada
+  - Resolve problemas de concorrência
+  - Permite compartilhamento de dados
 
-C/C++ Linguagem tem um gerenciamento de memoria full -> Rust já muda isso
+### **Curiosidade**
+O Linux e o Windows possuem uma arquitetura **monolítica**.
 
-Passagem por Referencia -> passa a referencia do valor
-Passagem por Valor -> Ele guarda o valor na caixinha 
+### **Gerenciamento de Memória em Linguagens de Programação**
+- **C/C++** → Gerenciamento de memória manual (*full control*).
+- **Rust** → Gerenciamento de memória mais seguro e automatizado.
+
+### **Passagem de Parâmetros**
+- **Passagem por Referência** → Envia a referência do valor, permitindo alteração direta.
+- **Passagem por Valor** → Copia o valor para uma nova variável, sem alterar o original.
+
+## Aula 06/03
+
+[Leitura "Who Needs an Architect?" ](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
+
+## Aula 19/03/25
+
+ - **Trade-off** → A mais escolhas, o famoso "Depende"
+ - Obs: Protocolo OSI
