@@ -88,3 +88,78 @@ O Linux e o Windows possuem uma arquitetura **monolítica**.
 
  - **Trade-off** → A mais escolhas, o famoso "Depende"
  - Obs: Protocolo OSI
+
+ ## Aula 09/04 - Resumo – Capítulo: Características Arquiteturais
+
+## 📌 O que são Características Arquiteturais?
+São as qualidades ou atributos que um sistema de software precisa apresentar para atender às necessidades dos stakeholders, como desempenho, segurança e escalabilidade. Elas descrevem **"como"** o sistema se comporta, além de suas funcionalidades.
+
+---
+
+## 🧩 Categorias Principais de Características
+
+1. **Características Funcionais**: Relacionadas ao que o sistema faz (exemplo: funcionalidade de login).
+2. **Características Não Funcionais (Qualidade)**: Relacionadas ao comportamento do sistema, como:
+   - **Desempenho**: Tempo de resposta, throughput.
+   - **Segurança**: Proteção contra ataques, integridade dos dados.
+   - **Escalabilidade**: Capacidade de aumentar recursos sem perder desempenho.
+   - **Manutenibilidade**: Facilidade de alteração do sistema.
+
+---
+
+## 🛠️ Como Trabalhar com Características Arquiteturais?
+
+### ✔️ **Cenários de Qualidade**:
+Descrever as características com base em cenários que identificam as condições, ações e resultados esperados para medir o comportamento de uma característica.
+- **Exemplo**: “Em um pico de 1000 usuários simultâneos, o sistema deve responder em menos de 2 segundos.”
+
+### ✔️ **Táticas Arquiteturais**:
+São soluções ou estratégias para alcançar características de qualidade.
+- **Desempenho**: Usar cache, balanceamento de carga.
+- **Segurança**: Implementar criptografia, autenticação.
+- **Escalabilidade**: Usar microserviços, replicação.
+
+---
+
+## 📌 Importância das Características Arquiteturais
+- Elas orientam as **decisões de arquitetura**, como escolhas de padrões e tecnologias.
+- Ajudam a garantir que as **expectativas de qualidade** sejam atendidas ao longo do ciclo de vida do sistema.
+
+## Aula 16/04 - Resumo – Fundamentos da Arquitetura de Software
+
+## 📌 O que é Arquitetura de Software?
+Arquitetura de software é a **estrutura organizacional** do sistema, definindo como os componentes interagem e quais decisões importantes são tomadas sobre a construção e evolução do sistema.
+
+---
+
+## 🧩 Objetivos da Arquitetura de Software
+- Atender aos **requisitos** do sistema, equilibrando qualidades como desempenho, segurança e escalabilidade.
+- **Facilitar mudanças** no sistema, garantindo que ele seja flexível e sustentável.
+- **Gerenciar complexidade**, criando soluções que mantenham a clareza e o controle sobre as partes do sistema.
+
+---
+
+## 🛠️ Funções da Arquitetura de Software
+1. **Documentação**: A arquitetura deve ser documentada para guiar a equipe de desenvolvimento.
+2. **Decisões de Design**: Define como os componentes principais interagem.
+3. **Avaliação**: A arquitetura serve para avaliar como o sistema pode evoluir, levando em consideração as qualidades não funcionais.
+
+---
+
+## 🧠 Importância da Arquitetura
+- A arquitetura afeta diretamente **custo**, **desempenho**, **segurança**, **manutenção** e **escalabilidade**.
+- Influi na **comunicação entre equipes** e pode afetar o **tempo de entrega** do projeto.
+
+---
+
+## 🔄 Processo Arquitetural
+- **Definir requisitos**: Estabelecer as necessidades do sistema (funcionais e não funcionais).
+- **Desenhar a arquitetura**: Escolher estilos e padrões que atendem aos requisitos.
+- **Avaliar a arquitetura**: Verificar se ela atende aos objetivos através de métodos como o **ATAM** (Architecture Tradeoff Analysis Method).
+
+---
+
+## ⚙️ Estilos Arquiteturais
+- **Camadas**: Divide a arquitetura em camadas de abstração.
+- **Microserviços**: Divide o sistema em pequenos serviços independentes.
+- **Cliente-Servidor**: Modelo tradicional de comunicação entre clientes e servidores.
