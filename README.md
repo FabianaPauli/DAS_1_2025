@@ -80,86 +80,130 @@ O Linux e o Windows possuem uma arquitetura **monolítica**.
 - **Passagem por Referência** → Envia a referência do valor, permitindo alteração direta.
 - **Passagem por Valor** → Copia o valor para uma nova variável, sem alterar o original.
 
+---
+
 ## Aula 06/03
 
-[Leitura "Who Needs an Architect?" ](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
+- [Leitura "Who Needs an Architect?" ](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
 
-## Aula 19/03/25
+---
 
+## Aula 19/03
  - **Trade-off** → A mais escolhas, o famoso "Depende"
  - Obs: Protocolo OSI
 
- ## Aula 09/04 - Resumo – Capítulo: Características Arquiteturais
+---
 
-## 📌 O que são Características Arquiteturais?
-São as qualidades ou atributos que um sistema de software precisa apresentar para atender às necessidades dos stakeholders, como desempenho, segurança e escalabilidade. Elas descrevem **"como"** o sistema se comporta, além de suas funcionalidades.
+## Aula 09/04 - Resumo: Capítulo "Definição das Características da Arquitetura"
+### Livro: Fundamentos da Engenharia de Software
+
+Este documento apresenta um resumo do capítulo que trata sobre a definição das características da arquitetura em sistemas de software. O objetivo é destacar os principais pontos abordados pelos autores sobre como os arquitetos devem considerar fatores além dos requisitos funcionais ao projetar uma solução.
+
+### O que são Características da Arquitetura?
+
+As características da arquitetura são aspectos críticos de design que:
+1. Não pertencem diretamente ao domínio do problema.
+2. Influenciam a estrutura do sistema.
+3. São essenciais para o sucesso da aplicação.
+
+Embora frequentemente chamadas de "requisitos não funcionais" ou "atributos de qualidade", o termo "características da arquitetura" é preferido pelos autores por valorizar sua importância no sucesso do sistema.
+
+### Três Critérios Fundamentais
+
+1. **Consideração fora do domínio**  
+   Exemplo: Desempenho, segurança, prevenção de débito técnico.
+
+2. **Impacto estrutural no design**  
+   Exemplo: Um sistema que processa pagamentos pode requerer módulos específicos para segurança.
+
+3. **Essencialidade para o sucesso da aplicação**  
+   Os arquitetos devem focar nas características realmente críticas para evitar complexidade excessiva.
+
+### Tipos de Características da Arquitetura
+
+#### Operacionais
+Envolvem o comportamento em produção e operação do sistema:
+
+| Termo            | Descrição |
+|------------------|-----------|
+| Disponibilidade  | Tempo que o sistema deve permanecer ativo. |
+| Desempenho       | Testes de carga, tempo de resposta, picos de uso. |
+| Recuperabilidade | Tempo necessário para recuperar após falhas. |
+| Confiabilidade / Segurança | Robustez do sistema contra falhas críticas. |
+| Escalabilidade   | Suporte ao aumento de usuários e requisições. |
+| Robustez         | Resiliência a erros e falhas externas. |
+
+#### Estruturais
+Relacionadas à organização interna do sistema:
+
+| Termo         | Descrição |
+|---------------|-----------|
+| Modularidade  | Divisão clara entre partes do sistema. |
+| Reutilização  | Uso de componentes em múltiplas soluções. |
+| Portabilidade | Execução em diferentes plataformas. |
+| Manutenção    | Facilidade de modificar e corrigir o sistema. |
+| Atualização   | Facilidade de atualizar a aplicação. |
+
+#### Transversais
+Abrangem preocupações amplas, difíceis de categorizar:
+
+| Termo           | Descrição |
+|-----------------|-----------|
+| Acessibilidade  | Inclusão de pessoas com deficiência. |
+| Segurança       | Criptografia, autenticação e autorização. |
+| Privacidade     | Proteção de dados sensíveis. |
+| Legalidade      | Conformidade com leis e regulamentos. |
+| Usabilidade     | Facilidade de uso e aprendizado do sistema. |
+
+### Considerações Finais
+
+- Cada organização pode definir suas próprias características da arquitetura com base em necessidades específicas.
+- Algumas características são implícitas (exemplo: confiabilidade) e nem sempre aparecem nos requisitos.
+- Muitas características se sobrepõem, exigindo decisões de trade-off durante o projeto.
+- Referência à padronização ISO pode ajudar na definição de critérios mais objetivos.
+
+### Curiosidade: "Como na Itália"
+
+Uma história real inspirou a criação de uma característica única: "Italy-ility", uma exigência arquitetural que combinava disponibilidade, recuperabilidade e resiliência devido a um evento traumático de perda de comunicação com a Itália.
 
 ---
 
-## 🧩 Categorias Principais de Características
+## Aula 16/04 - Resumo: Capítulo "Fundamentos"
+### Livro: Fundamentos da Engenharia de Software
 
-1. **Características Funcionais**: Relacionadas ao que o sistema faz (exemplo: funcionalidade de login).
-2. **Características Não Funcionais (Qualidade)**: Relacionadas ao comportamento do sistema, como:
-   - **Desempenho**: Tempo de resposta, throughput.
-   - **Segurança**: Proteção contra ataques, integridade dos dados.
-   - **Escalabilidade**: Capacidade de aumentar recursos sem perder desempenho.
-   - **Manutenibilidade**: Facilidade de alteração do sistema.
+Este documento apresenta um resumo do capítulo "Fundamentos", que introduz os conceitos essenciais da arquitetura de software, desde estilos fundamentais até os desafios inerentes às arquiteturas distribuídas. O objetivo é fornecer uma visão geral dos principais tópicos abordados pelos autores para estabelecer uma base sólida para a compreensão dos padrões arquiteturais mais complexos.
 
----
+### O que são Estilos de Arquitetura e Padrões Fundamentais?
 
-## 🛠️ Como Trabalhar com Características Arquiteturais?
+O capítulo inicia definindo **estilos de arquitetura** como modelos nomeados de componentes que abrangem diversas características arquiteturais. Assim como padrões de projeto, eles fornecem um vocabulário comum para arquitetos. São apresentados **padrões fundamentais**, como o conceito de camadas, que persistem devido à sua utilidade na organização do software.
 
-### ✔️ **Cenários de Qualidade**:
-Descrever as características com base em cenários que identificam as condições, ações e resultados esperados para medir o comportamento de uma característica.
-- **Exemplo**: “Em um pico de 1000 usuários simultâneos, o sistema deve responder em menos de 2 segundos.”
+### O Antipattern da Grande Bola de Lama
 
-### ✔️ **Táticas Arquiteturais**:
-São soluções ou estratégias para alcançar características de qualidade.
-- **Desempenho**: Usar cache, balanceamento de carga.
-- **Segurança**: Implementar criptografia, autenticação.
-- **Escalabilidade**: Usar microserviços, replicação.
+Em contraste com arquiteturas bem estruturadas, o capítulo descreve o **antipadrão da Grande Bola de Lama**, caracterizado pela ausência de uma estrutura clara, resultando em um sistema difícil de manter e evoluir.
 
----
+### Evolução das Arquiteturas: De Unitária a Cliente/Servidor
 
-## 📌 Importância das Características Arquiteturais
-- Elas orientam as **decisões de arquitetura**, como escolhas de padrões e tecnologias.
-- Ajudam a garantir que as **expectativas de qualidade** sejam atendidas ao longo do ciclo de vida do sistema.
+A evolução das arquiteturas é brevemente traçada, desde a **arquitetura unitária** até a **arquitetura cliente/servidor** (com suas variações desktop + banco de dados e navegador + servidor web), destacando a separação de responsabilidades. A **arquitetura de três camadas** é apresentada como um passo adiante na separação de preocupações.
 
-## Aula 16/04 - Resumo – Fundamentos da Arquitetura de Software
+### Arquiteturas Monolíticas Versus Distribuídas
 
-## 📌 O que é Arquitetura de Software?
-Arquitetura de software é a **estrutura organizacional** do sistema, definindo como os componentes interagem e quais decisões importantes são tomadas sobre a construção e evolução do sistema.
+O capítulo estabelece a distinção fundamental entre **arquiteturas monolíticas** (implementação unificada) e **arquiteturas distribuídas** (componentes conectados remotamente), listando exemplos de estilos dentro de cada categoria que serão detalhados em capítulos posteriores.
 
----
+### As Oito Falácias da Computação Distribuída
 
-## 🧩 Objetivos da Arquitetura de Software
-- Atender aos **requisitos** do sistema, equilibrando qualidades como desempenho, segurança e escalabilidade.
-- **Facilitar mudanças** no sistema, garantindo que ele seja flexível e sustentável.
-- **Gerenciar complexidade**, criando soluções que mantenham a clareza e o controle sobre as partes do sistema.
+Uma parte crucial do capítulo é dedicada às **oito falácias da computação distribuída**, que alertam para suposições comuns, porém falsas, sobre sistemas distribuídos e suas potenciais consequências:
 
----
+1.  **A rede é confiável:** Acreditamos que a rede sempre funcionará, mas falhas ocorrem (problemas de roteamento, hardware, etc.), impactando a comunicação entre serviços. Isso exige mecanismos como timeouts e circuit breakers.
+2.  **A latência é zero:** Assumimos que a comunicação remota é instantânea, ignorando o tempo necessário para a transmissão de dados pela rede. Essa latência acumulada pode degradar significativamente o desempenho.
+3.  **A largura de banda é infinita:** Pensamos que sempre haverá capacidade suficiente na rede para todas as comunicações, desconsiderando gargalos e a quantidade de dados transferidos, especialmente em interações frequentes entre serviços.
+4.  **A rede é segura:** Confiamos em firewalls e VPNs, mas a rede em si não é intrinsecamente segura, exigindo medidas de segurança em cada ponto de comunicação entre os serviços.
+5.  **A topologia nunca muda:** Presumimos que a infraestrutura de rede permanece estática, ignorando upgrades, reconfigurações e falhas que podem afetar a conectividade e o desempenho dos serviços.
+6.  **Existe apenas um administrador:** Assumimos um único ponto de contato para questões de rede, quando na realidade múltiplas equipes e indivíduos gerenciam diferentes partes da infraestrutura, dificultando a coordenação e a resolução de problemas.
+7.  **O custo do transporte é zero:** Ignoramos os custos financeiros e de recursos (hardware, infraestrutura) associados à comunicação remota entre serviços, que são significativamente maiores do que chamadas locais em sistemas monolíticos.
+8.  **A rede é homogênea:** Supomos que toda a rede é composta por equipamentos de um único fornecedor e com configurações uniformes, desconsiderando a heterogeneidade que pode levar a problemas de compatibilidade e comportamento inesperado.
 
-## 🛠️ Funções da Arquitetura de Software
-1. **Documentação**: A arquitetura deve ser documentada para guiar a equipe de desenvolvimento.
-2. **Decisões de Design**: Define como os componentes principais interagem.
-3. **Avaliação**: A arquitetura serve para avaliar como o sistema pode evoluir, levando em consideração as qualidades não funcionais.
+Compreender essas falácias é essencial para evitar erros comuns no projeto de sistemas distribuídos e para implementar soluções mais resilientes e eficientes.
 
----
+### Outras Considerações em Arquiteturas Distribuídas
 
-## 🧠 Importância da Arquitetura
-- A arquitetura afeta diretamente **custo**, **desempenho**, **segurança**, **manutenção** e **escalabilidade**.
-- Influi na **comunicação entre equipes** e pode afetar o **tempo de entrega** do projeto.
-
----
-
-## 🔄 Processo Arquitetural
-- **Definir requisitos**: Estabelecer as necessidades do sistema (funcionais e não funcionais).
-- **Desenhar a arquitetura**: Escolher estilos e padrões que atendem aos requisitos.
-- **Avaliar a arquitetura**: Verificar se ela atende aos objetivos através de métodos como o **ATAM** (Architecture Tradeoff Analysis Method).
-
----
-
-## ⚙️ Estilos Arquiteturais
-- **Camadas**: Divide a arquitetura em camadas de abstração.
-- **Microserviços**: Divide o sistema em pequenos serviços independentes.
-- **Cliente-Servidor**: Modelo tradicional de comunicação entre clientes e servidores.
+Além das falácias, o capítulo menciona desafios adicionais em arquiteturas distribuídas, como a complexidade do **log distribuído** (rastrear requisições em múltiplos logs), o gerenciamento de **transações distribuídas** (garantir a consistência de dados em múltiplos serviços, introduzindo conceitos como consistência eventual e sagas), e a dificuldade na **manutenção e versionamento de contratos** (gerenciar a evolução das interfaces entre serviços independentes).
